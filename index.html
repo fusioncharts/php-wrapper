@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+    <head>
+        <title>FusionCharts PHP Wrapper</title>
+        <style type="text/css">
+            pre {
+                max-height: 400px;
+            }
+
+            /* From the passportjs.org website */
+            .masthead {
+              margin-bottom: 20px;
+              padding-bottom: 5px;
+              border-bottom: 1px solid #eeeeee;
+            }
+
+            .masthead .logo {
+              height: 38px;
+              width: 210px;
+            }
+
+            .masthead h3 a {
+              color: #333333;;
+              text-decoration: none;
+            }
+
+            .masthead h3 a:hover {
+              color: #333333;
+              text-decoration: none;
+            }
+
+           
+        </style>
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="masthead">
+                    <ul class="nav nav-pills pull-right">
+                        <li><a href="http://fusioncharts.com/">FusionCharts Home</a></li>
+                    </ul>
+                    <h3>
+                        <a href="http://fusioncharts.github.io/php-wrapper/"><img src="http://www.fusioncharts.com/theme/210x38xlogo.png.pagespeed.ic.KZD9tJ7qIK.png" class="logo"></a>
+                    </h3>
+                </div>
+                <div class="jumbotron">
+                    <h1>FusionCharts PHP Wrapper</h1>
+                    <p>PHP wrapper to build charts using FusionCharts.</p>
+                    <p><a class="btn btn-primary btn-lg" href="#" role="button"><i class="glyphicon glyphicon-download"></i> Download (1.0)</a></p>
+                </div>
+                <div class="readme">
+<h3 id="what-is-fusioncharts-php-wrapper-">What is FusionCharts PHP wrapper?</h3>
+<p>FusionCharts Suite XT uses JavaScript to generate charts in the browser. Where using this PHP server side wrapper you can create charts in your PHP website without writing any Javascript code. </p>
+<h3 id="how-does-the-wrapper-work-">How does the wrapper work?</h3>
+<p>Charts are generated in the browsers with the help of JavaScript and the HTML code.
+Using this PHP wrapper we can generate the required JavaScript and HTML code as a string in the server. We can put this strings in the page to generate charts.</p>
+<h3 id="version">Version</h3>
+<p>1.0</p>
+<h3 id="requirements">Requirements</h3>
+<p>PHP 5 or higher</p>
+<h3 id="installation">Installation</h3>
+<ul>
+<li>Include FusionCharts.php in your project.</li>
+<li>Start using methods and classes available under <strong>&quot;FusionCharts.Charts&quot;</strong> namespace to generate Charts in your project.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<h5 id="chart-class-fusioncharts-">Chart Class (FusionCharts)</h5>
+<p>Represent the FusionCharts class that can be initialized to create a chart.</p>
+<h6 id="-constructor-parameters-"><strong>Constructor parameters:</strong></h6>
+<p>Following parameters can be used in the constructor in the order as they are described. Some parameters are optional. This function assumes that you&#39;ve already included the FusionCharts JavaScript library in your page.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:center">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">chartType</td>
+<td style="text-align:center"><code>String</code></td>
+<td style="text-align:left">The type of chart that you intend to plot. e.g. <code>Column3D</code>, <code>Column2D</code>, <code>Pie2D</code> etc.</td>
+</tr>
+<tr>
+<td style="text-align:left">chartId</td>
+<td style="text-align:center"><code>String</code></td>
+<td style="text-align:left">Id for the chart, using which it will be recognized in the HTML page. Each chart on the page needs to have a unique Id.</td>
+</tr>
+<tr>
+<td style="text-align:left">chartWidth</td>
+<td style="text-align:center"><code>String</code></td>
+<td style="text-align:left">Intended width for the chart (in pixels). e.g. <code>400</code></td>
+</tr>
+<tr>
+<td style="text-align:left">chartHeight</td>
+<td style="text-align:center"><code>String</code></td>
+<td style="text-align:left">Intended height for the chart (in pixels). e.g. <code>300</code></td>
+</tr>
+<tr>
+<td style="text-align:left">dataFormat</td>
+<td style="text-align:center"><code>String</code></td>
+<td style="text-align:left">Type of the data that is given to the chart. e.g. <code>json</code>, <code>jsonurl</code>, <code>csv</code>, <code>xml</code>, <code>xmlurl</code></td>
+</tr>
+<tr>
+<td style="text-align:left">dataSource</td>
+<td style="text-align:center"><code>String</code></td>
+<td style="text-align:left">Actual data for the chart. e.g. <code>{&quot;chart&quot;:{},&quot;data&quot;:[{&quot;label&quot;:&quot;Jan&quot;,&quot;value&quot;:&quot;420000&quot;}]}</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="methods-under-chart-class">Methods under Chart class</h5>
+<h6 id="-render-"><strong>Render</strong></h6>
+<p>Public method to generate html code for rendering chart. This function assumes that you&#39;ve already included the FusionCharts JavaScript library in your page.</p>
+<h3 id="license">License</h3>
+<p><strong>FUSIONCHARTS:</strong></p>
+<p>Copyright (c) FusionCharts Technologies LLP<br>License Information at <a href="http://www.fusioncharts.com/license">http://www.fusioncharts.com/license</a></p>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
