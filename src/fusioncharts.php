@@ -2,21 +2,22 @@
 
     class FusionCharts {
         
-        private $constructorOptions = [];
-        private $constructorTemplate = <<<EOD
+        private $constructorOptions = array();
+
+        private $constructorTemplate = '
         <script type="text/javascript">
             FusionCharts.ready(function () {
                 new FusionCharts(__constructorOptions__);
             });
-        </script>
-EOD;
-        private $renderTemplate = <<<EOD
-        <script type='text/javascript'>
+        </script>';
+
+        private $renderTemplate = '
+        <script type="text/javascript">
             FusionCharts.ready(function () {
                 FusionCharts("__chartId__").render();
             });
         </script>
-EOD;
+        ';
 
         // constructor
         function __construct($type, $id, $width = 400, $height = 300, $renderAt, $dataFormat, $dataSource) {
@@ -28,7 +29,7 @@ EOD;
             isset($dataFormat) ? $this->constructorOptions['dataFormat'] = $dataFormat : '';
             isset($dataSource) ? $this->constructorOptions['dataSource'] = $dataSource : '';
 
-            $tempArray = [];
+            $tempArray = array();
             foreach($this->constructorOptions as $key => $value) {
                 if ($key === 'dataSource') {
                     $tempArray['dataSource'] = '__dataSource__';
