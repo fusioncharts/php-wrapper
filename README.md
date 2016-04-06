@@ -92,8 +92,12 @@ Now, you are ready to prepare the chart using our PHP-wrapper.
 			   ]
 		}');
 ```
-
 #### Step 3:
+**Add a chart container div with provided id**
+```html
+<div id="chart1"></div>
+```
+#### Step 4:
 **Render the chart**
 ```php
 $columnChart->render();
@@ -108,6 +112,7 @@ Following parameters can be used in a constructor in the order they are describe
 |chartId | `String` | Id for the chart, using which it will be recognized in the HTML page. Each chart on the page should have a unique Id.|
 |chartWidth | `String` | Intended width for the chart (in pixels). e.g. `400`|
 |chartHeight | `String` | Intended height for the chart (in pixels). e.g. `300`|
+|containerId | `String` | The id of the chart container. e.g. `chart-1`|
 |dataFormat | `String` | Type of data used to render the chart. e.g. `json`, `jsonurl`, `xml`, `xmlurl`|
 |dataSource | `String` | Actual data for the chart. e.g. `{"chart":{},"data":[{"label":"Jan","value":"420000"}]}`|
 
