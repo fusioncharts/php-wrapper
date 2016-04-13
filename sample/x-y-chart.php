@@ -50,7 +50,26 @@
 </head>
 <body>
 <?php
+
+/**
+* This example describes the X-Y chart preparation using FusionCharts PHP wrapper
+*/
+
+
+// Including the wrapper file in the page
 include("../src/fusioncharts.php");
+
+// Preparing the object of FusionCharts with needed informations
+    /**
+    * The parameters of the constructor are as follows
+    * chartType   {String}  The type of chart that you intend to plot. e.g. Column3D, Column2D, Pie2D etc.
+    * chartId     {String}  Id for the chart, using which it will be recognized in the HTML page. Each chart on the page should have a unique Id.
+    * chartWidth  {String}  Intended width for the chart (in pixels). e.g. 400
+    * chartHeight {String}  Intended height for the chart (in pixels). e.g. 300
+    * containerId {String}  The id of the chart container. e.g. chart-1
+    * dataFormat  {String}  Type of data used to render the chart. e.g. json, jsonurl, xml, xmlurl
+    * dataSource  {String}  Actual data for the chart. e.g. {"chart":{},"data":[{"label":"Jan","value":"420000"}]}
+    */
 $columnChart = new FusionCharts("scatter", "ex1" , "100%", 400, "chart-1", "json", '{
             "chart": {
                 "theme": "fint",

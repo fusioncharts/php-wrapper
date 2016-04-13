@@ -50,60 +50,79 @@
 </head>
 <body>
 	<?php
+    
+    /**
+    * This example describes the gauge preparation using FusionCharts PHP wrapper
+    */
+
+    // Including the wrapper file in the page
 	include("../src/fusioncharts.php");
+
+    // Preparing the object of FusionCharts with needed informations
+    /**
+    * The parameters of the constructor are as follows
+    * chartType   {String}  The type of chart that you intend to plot. e.g. Column3D, Column2D, Pie2D etc.
+    * chartId     {String}  Id for the chart, using which it will be recognized in the HTML page. Each chart on the page should have a unique Id.
+    * chartWidth  {String}  Intended width for the chart (in pixels). e.g. 400
+    * chartHeight {String}  Intended height for the chart (in pixels). e.g. 300
+    * containerId {String}  The id of the chart container. e.g. chart-1
+    * dataFormat  {String}  Type of data used to render the chart. e.g. json, jsonurl, xml, xmlurl
+    * dataSource  {String}  Actual data for the chart. e.g. {"chart":{},"data":[{"label":"Jan","value":"420000"}]}
+    */
 	$angularChart = new FusionCharts("AngularGauge", "ex1" , "100%", "200", "chart-1", "json", '{
-    "chart": {
-        "caption": "Customer Satisfaction Score",
-        "lowerlimit": "0",
-        "upperlimit": "100",
-        "lowerlimitdisplay": "Bad",
-        "upperlimitdisplay": "Good",
-        "palette": "1",
-        "numbersuffix": "%",
-        "tickvaluedistance": "10",
-        "showvalue": "0",
-        "gaugeinnerradius": "0",
-        "bgcolor": "FFFFFF",
-        "pivotfillcolor": "333333",
-        "pivotradius": "8",
-        "pivotfillmix": "333333, 333333",
-        "pivotfilltype": "radial",
-        "pivotfillratio": "0,100",
-        "showtickvalues": "1",
-        "showborder": "0"
-    },
-    "colorrange": {
-        "color": [
-            {
-                "minvalue": "0",
-                "maxvalue": "45",
-                "code": "e44a00"
-            },
-            {
-                "minvalue": "45",
-                "maxvalue": "75",
-                "code": "f8bd19"
-            },
-            {
-                "minvalue": "75",
-                "maxvalue": "100",
-                "code": "6baa01"
-            }
-        ]
-    },
-    "dials": {
-        "dial": [
-            {
-                "value": "92",
-                "rearextension": "15",
-                "radius": "100",
-                "bgcolor": "333333",
-                "bordercolor": "333333",
-                "basewidth": "8"
-            }
-        ]
-    }
-}');
+        "chart": {
+            "caption": "Customer Satisfaction Score",
+            "lowerlimit": "0",
+            "upperlimit": "100",
+            "lowerlimitdisplay": "Bad",
+            "upperlimitdisplay": "Good",
+            "palette": "1",
+            "numbersuffix": "%",
+            "tickvaluedistance": "10",
+            "showvalue": "0",
+            "gaugeinnerradius": "0",
+            "bgcolor": "FFFFFF",
+            "pivotfillcolor": "333333",
+            "pivotradius": "8",
+            "pivotfillmix": "333333, 333333",
+            "pivotfilltype": "radial",
+            "pivotfillratio": "0,100",
+            "showtickvalues": "1",
+            "showborder": "0"
+        },
+        "colorrange": {
+            "color": [
+                {
+                    "minvalue": "0",
+                    "maxvalue": "45",
+                    "code": "e44a00"
+                },
+                {
+                    "minvalue": "45",
+                    "maxvalue": "75",
+                    "code": "f8bd19"
+                },
+                {
+                    "minvalue": "75",
+                    "maxvalue": "100",
+                    "code": "6baa01"
+                }
+            ]
+        },
+        "dials": {
+            "dial": [
+                {
+                    "value": "92",
+                    "rearextension": "15",
+                    "radius": "100",
+                    "bgcolor": "333333",
+                    "bordercolor": "333333",
+                    "basewidth": "8"
+                }
+            ]
+        }
+    }');
+
 	// Render the chart
 	$angularChart->render();
 ?>
