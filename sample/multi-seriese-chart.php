@@ -71,112 +71,67 @@ include("../src/fusioncharts.php");
     * dataSource  {String}  Actual data for the chart. e.g. {"chart":{},"data":[{"label":"Jan","value":"420000"}]}
     */
 $columnChart = new FusionCharts("msbar2d", "ex1" , "100%", 400, "chart-1", "json", '{
-            "chart": {
-                "caption": "Split of Sales by Product Category",
-                "subCaption": "In top 5 stores last month",
-                "yAxisname": "Sales (In USD)",
-                "numberPrefix": "$",
-                "paletteColors": "#0075c2,#1aaf5d",
-                "bgColor": "#ffffff",
-                "showBorder": "0",
-                "showHoverEffect":"1",
-                "showCanvasBorder": "0",
-                "usePlotGradientColor": "0",
-                "plotBorderAlpha": "10",
-                "legendBorderAlpha": "0",
-                "legendShadow": "0",
-                "placevaluesInside": "1",
-                "valueFontColor": "#ffffff",
-                "showXAxisLine": "1",
-                "xAxisLineColor": "#999999",
-                "divlineColor": "#999999",               
-                "divLineIsDashed": "1",
-                "showAlternateVGridColor": "0",
-                "subcaptionFontBold": "0",
-                "subcaptionFontSize": "14"
-            },            
-            "categories": [
-                {
-                    "category": [
-                        {
-                            "label": "Bakersfield Central"
-                        }, 
-                        {
-                            "label": "Garden Groove harbour"
-                        }, 
-                        {
-                            "label": "Los Angeles Topanga"
-                        }, 
-                        {
-                            "label": "Compton-Rancho Dom"
-                        }, 
-                        {
-                            "label": "Daly City Serramonte"
-                        }
-                    ]
-                }
-            ],            
-            "dataset": [
-                {
-                    "seriesname": "Food Products",
-                    "data": [
-                        {
-                            "value": "17000"
-                        }, 
-                        {
-                            "value": "19500"
-                        }, 
-                        {
-                            "value": "12500"
-                        }, 
-                        {
-                            "value": "14500"
-                        }, 
-                        {
-                            "value": "17500"
-                        }
-                    ]
-                }, 
-                {
-                    "seriesname": "Non-Food Products",
-                    "data": [
-                        {
-                            "value": "25400"
-                        }, 
-                        {
-                            "value": "29800"
-                        }, 
-                        {
-                            "value": "21800"
-                        }, 
-                        {
-                            "value": "19500"
-                        }, 
-                        {
-                            "value": "11500"
-                        }
-                    ]
-                }
-            ],
-            "trendlines": [
-                {
-                    "line": [
-                        {
-                            "startvalue": "15000",
-                            "color": "#0075c2",
-                            "valueOnRight": "1",
-                            "displayvalue": "Avg. for{br}Food"
-                        },
-                        {
-                            "startvalue": "22000",
-                            "color": "#1aaf5d",
-                            "valueOnRight": "1",
-                            "displayvalue": "Avg. for{br}Non-food"
-                        }
-                    ]
-                }
-            ]
-        }');
+      "chart": {
+        "caption": "Split of Sales by Product Category",
+        "subCaption": "5 top performing stores  - last month",
+        "captionPadding": "15",
+        "numberPrefix": "$",
+        "showvalues": "1",
+        "valueFontColor": "#ffffff",
+        "placevaluesInside": "1",
+        "usePlotGradientColor": "0",
+        "legendShadow": "0",
+        "showXAxisLine": "1",
+        "xAxisLineColor": "#999999",
+        "divlineColor": "#999999",
+        "divLineIsDashed": "1",
+        "showAlternateVGridColor": "0",
+        "alignCaptionWithCanvas": "0",
+        "legendPadding": "15",
+        "plotToolText": "<div><b>$label</b><br/>Product : <b>$seriesname</b><br/>Sales : <b>$$value</b></div>",
+        "theme": "fint"
+      },
+      "categories": [{
+        "category": [{
+          "label": "Garden Groove harbour"
+        }, {
+          "label": "Bakersfield Central"
+        }, {
+          "label": "Los Angeles Topanga"
+        }, {
+          "label": "Compton-Rancho Dom"
+        }, {
+          "label": "Daly City Serramonte"
+        }]
+      }],
+      "dataset": [{
+        "seriesname": "Non-Food Products",
+        "data": [{
+          "value": "28800"
+        }, {
+          "value": "25400"
+        }, {
+          "value": "21800"
+        }, {
+          "value": "19500"
+        }, {
+          "value": "11500"
+        }]
+      }, {
+        "seriesname": "Food Products",
+        "data": [{
+          "value": "17000"
+        }, {
+          "value": "19500"
+        }, {
+          "value": "12500"
+        }, {
+          "value": "14500"
+        }, {
+          "value": "17500"
+        }]
+      }]
+    }');
 // Render the chart
 $columnChart->render();
 ?>
