@@ -29,6 +29,10 @@
             isset($dataFormat) ? $this->constructorOptions['dataFormat'] = $dataFormat : '';
             isset($dataSource) ? $this->constructorOptions['dataSource'] = $dataSource : '';
 
+            
+        }
+
+        function prepareAndEchoConstructorHTML() {
             $tempArray = array();
             foreach($this->constructorOptions as $key => $value) {
                 if ($key === 'dataSource') {
@@ -40,14 +44,14 @@
             
             $jsonEncodedOptions = json_encode($tempArray);
             
-            if ($dataFormat === 'json') {
+            if ($this->constructorOptions['dataFormat'] === 'json') {
                 $jsonEncodedOptions = preg_replace('/\"__dataSource__\"/', $this->constructorOptions['dataSource'], $jsonEncodedOptions);
-            } elseif ($dataFormat === 'xml') { 
+            } elseif ($this->constructorOptions['dataFormat'] === 'xml') { 
                 $jsonEncodedOptions = preg_replace('/\"__dataSource__\"/', '\'__dataSource__\'', $jsonEncodedOptions);
                 $jsonEncodedOptions = preg_replace('/__dataSource__/', $this->constructorOptions['dataSource'], $jsonEncodedOptions);
-            } elseif ($dataFormat === 'xmlurl') {
+            } elseif ($this->constructorOptions['dataFormat'] === 'xmlurl') {
                 $jsonEncodedOptions = preg_replace('/__dataSource__/', $this->constructorOptions['dataSource'], $jsonEncodedOptions);
-            } elseif ($dataFormat === 'jsonurl') {
+            } elseif ($this->constructorOptions['dataFormat'] === 'jsonurl') {
                 $jsonEncodedOptions = preg_replace('/__dataSource__/', $this->constructorOptions['dataSource'], $jsonEncodedOptions);
             }
             $newChartHTML = preg_replace('/__constructorOptions__/', $jsonEncodedOptions, $this->constructorTemplate);
@@ -58,8 +62,13 @@
         // render the chart created
         // It prints a script and calls the FusionCharts javascript render method of created chart
         function render() {
+           $this->prepareAndEchoConstructorHTML(); 
            $renderHTML = preg_replace('/__chartId__/', $this->constructorOptions['id'], $this->renderTemplate);
            echo $renderHTML;
+        }
+
+        function setChartParameter($parameterName, $value) {
+            $this->constructorOptions[$parameterName] = $value;
         }
 
     }
