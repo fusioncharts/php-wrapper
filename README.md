@@ -117,6 +117,12 @@ Following parameters can be used in a constructor in the order they are describe
 |dataSource | `String` | Actual data for the chart. e.g. `{"chart":{},"data":[{"label":"Jan","value":"420000"}]}`|
 
 ##### Methods under Chart class
+###### **setChartParameter**
+| Parameter | Type | Description |
+|:-------|:----------:| :------|
+| parameterName | `String` | The name of the attribute. e.g. `"dataEmptyMessage"` etc.|
+|value | `String` | The value of the attribute.|
+Public method to set chart attributes before renderring the chartl.
 ###### **Render**
 Public method to generate html code for rendering chart. This function assumes that you've already included the FusionCharts JavaScript library to your page.
 
