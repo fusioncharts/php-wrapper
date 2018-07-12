@@ -20,7 +20,7 @@
         ';
 
         // constructor
-        function __construct($type, $id, $width = 400, $height = 300, $renderAt, $dataFormat, $dataSource) {
+        public function __construct($type, $id, $width = 400, $height = 300, $renderAt, $dataFormat, $dataSource) {
             isset($type) ? $this->constructorOptions['type'] = $type : '';
             isset($id) ? $this->constructorOptions['id'] = $id : 'php-fc-'.time();
             isset($width) ? $this->constructorOptions['width'] = $width : '';
@@ -57,10 +57,9 @@
 
         // render the chart created
         // It prints a script and calls the FusionCharts javascript render method of created chart
-        function render() {
+        public function render() : void {
            $renderHTML = preg_replace('/__chartId__/', $this->constructorOptions['id'], $this->renderTemplate);
            echo $renderHTML;
         }
 
     }
-?>
