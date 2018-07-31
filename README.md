@@ -15,7 +15,7 @@ PHP 5 or higher
 
 ### Installation
  * Download the **[`PHP wrapper package`](http://www.fusioncharts.com/php-charts/)**
- * Unzip the archive and move to "wrappers 2/php-wrapper/" to get the main class file "fusioncharts.php"
+ * Unzip the archive and move to "wrappers2/php-wrapper/" to get the main class file "fusioncharts.php"
  * Include "fusioncharts.php" in your project(Check **[the usage guide](#usage-guide)** for details).
  * Start using the methods and classes available under the **FusionCharts.Charts** namespace to generate charts in your project.. 
  
@@ -108,7 +108,7 @@ Following parameters can be used in a constructor in the order they are describe
 
 | Parameter | Type | Description |
 |:-------|:----------:| :------|
-| chartType | `String` | The type of chart that you intend to plot. e.g. `Column3D`, `Column2D`, `Pie2D` etc.|
+|chartType | `String` | The type of chart that you intend to plot. e.g. `Column3D`, `Column2D`, `Pie2D` etc.|
 |chartId | `String` | Id for the chart, using which it will be recognized in the HTML page. Each chart on the page should have a unique Id.|
 |chartWidth | `String` | Intended width for the chart (in pixels). e.g. `400`|
 |chartHeight | `String` | Intended height for the chart (in pixels). e.g. `300`|

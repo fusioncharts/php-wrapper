@@ -1,0 +1,12 @@
+<chart caption="Top 10 Most Popular Sports in the World" subcaption="Based on number of viewers" yaxisname="Number of Viewers" theme="fusion">
+<set label="Football" value="3500000000" tooltext="Popular in: {br}Europe{br}Africa{br}Asia{br}Americas" />
+<set label="Cricket" value="3000000000" tooltext="Popular in: {br}India{br}UK{br}Pakistan{br}Australia" />
+<set label="Field Hockey" value="2200000000" tooltext="Popular in: {br}Asia{br}Europe{br}Africa{br}Australia" />
+<set label="Tennis" value="1000000000" tooltext="Popular in: {br}Europe{br}Americas{br}Asia" />
+<set label="Volleyball" value="900000000" tooltext="Popular in: {br}Asia{br}Europe{br}Americas{br}Australia" />
+<set label="Table Tennis" value="900000000" tooltext="Popular in: {br}Asia{br}Europe{br}Africa{br}Americas" />
+<set label="Baseball" value="500000000" tooltext="Popular in: {br}US{br}Japan{br}Cuba{br}Dominican Republic" />
+<set label="Golf" value="400000000" tooltext="Popular in: {br}US{br}Canada{br}Europe" />
+<set label="Basketball" value="400000000" tooltext="Popular in: {br}US{br}Canada" />
+<set label="American football" value="390000000" tooltext="Popular in:{br}US" />
+</chart>
