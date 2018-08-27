@@ -5,8 +5,7 @@
 ?>
   <html>
 
-    <head>
-        <link rel="stylesheet" type="text/css" href="../FusionCharts/themes/fusioncharts.theme.fusion.css"></link>        
+    <head>  
         <title>FusionCharts | Chart Theme Sample</title>
         <!-- FusionCharts Library -->
         <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>

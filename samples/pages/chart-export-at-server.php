@@ -6,8 +6,7 @@
 ?>
   <html>
 
-    <head>
-        <link rel="stylesheet" type="text/css" href="../FusionCharts/themes/fusioncharts.theme.fusion.css"></link>        
+    <head>     
         <title>FusionCharts | Export Chart As Image (server-side)</title>
         <!-- FusionCharts Library -->
         <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>

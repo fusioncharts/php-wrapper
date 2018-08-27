@@ -121,6 +121,37 @@ Following parameters can be used in a constructor in the order they are describe
 Public method to generate html code for rendering chart. This function assumes that you've already included the FusionCharts JavaScript library to your page.
 
 
+### **Event parameters:**
+Following parameters can be used in an event in the order they are described.
+| Parameter | Type | Description |
+|:-------|:----------:| :------|
+|eventName | `String` | Which event you want to bind. e.g. `dataLoaded`.|
+|funcName | `String` | Javascript function, which is written in your client side code|
+More information: https://www.fusioncharts.com/dev/api/fusioncharts/fusioncharts-events
+```php
+// Creating FC Chart object
+$Chart = new FusionCharts("column2d", "chart-1" , "700", "400", "chart-container", "json", $chartData);
+// Attach 'dataplotClick' event
+$Chart->addEvent("dataplotClick", "onDataplotClick");
+// Render the chart
+$Chart->render();
+```
+### **Message parameters:**
+let you set and configure custom chart messages. Following parameters can be used in a message in the order they are described.
+| Parameter | Type | Description |
+|:-------|:----------:| :------|
+|messageName | `String` | Message you want to customize. e.g. loadMessage|
+|messageValue | `String` | Your custom message|
+More information: https://www.fusioncharts.com/dev/chart-attributes/
+```php
+// Creating FC Chart object
+$Chart = new FusionCharts("column2d", "chart-1" , "700", "400", "chart-container", "json", $chartData);
+// Attach message with message string.
+$Chart->addMessage("loadMessage", "please wait data is being loaded");
+// Render the chart
+$Chart->render();
+```
+
 ### License
 
 **FUSIONCHARTS:**

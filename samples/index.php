@@ -54,6 +54,65 @@
             <li>
                 <a href="pages/chart-from-json-url.php">Chart using data from JSON URL</a>  <!---->
             </li>
+            <li>
+                <a href="pages/dynamic-chart-resize.php">Dynamic Chart Resize</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/dynamic-chart-type.php">Chart Type Change At Runtime</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/chart-annotation.php">Using Annotations On Chart</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/updating-different-chart.php">Updating Different Chart</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/different-language.php">Different language example</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/chart-special-char.php">Chart using special character in XML data format</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/customizing-tooltip.php">Customizing tooltip</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/product-life-cycle-event.php">Example of event(product life cycle event)</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/special-event.php">Example of event(interactive event)</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/chart-message.php">Message related attributes and configuration</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/interactive-event.php">Example of event(interactive event)</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/number-format.php">Example of event(Number format)</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/special-chart-type-api.php">Example of event(SpecialChartType API)</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/chart-instance-level-api.php">Add/Remove event at runtime(Chart instance level API)</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/chart-product-level-api.php">Example of product level API</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/updating-chart-properties.php">Updating chart properties at runtime</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/highlight-specific-data-points.php">Highlight specific data points through API</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/update-data-runtime.php">Update data at runtime</a>  <!---->
+            </li>
+            <li>
+                <a href="pages/get-data-from-scatter-chart.php">Get data from select scatter chart and show them in tabular format</a>  <!---->
+            </li>
+            
+            
         </ol>
     </body>
 </html>
