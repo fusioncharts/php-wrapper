@@ -128,6 +128,7 @@ Following parameters can be used in an event in the order they are described.
 |:-------|:----------:| :------|
 |eventName | `String` | Which event you want to bind. e.g. `dataLoaded`.|
 |funcName | `String` | Javascript function, which is written in your client side code|
+
 More information: https://www.fusioncharts.com/dev/api/fusioncharts/fusioncharts-events
 
 ```php
@@ -146,6 +147,7 @@ let you set and configure custom chart messages. Following parameters can be use
 |:-------|:----------:| :------|
 |messageName | `String` | Message you want to customize. e.g. loadMessage|
 |messageValue | `String` | Your custom message|
+
 More information: https://www.fusioncharts.com/dev/chart-attributes/
 
 ```php
