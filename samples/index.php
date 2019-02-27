@@ -6,6 +6,42 @@
     <body style="font-family:'Helvetica Neue', Arial; font-size: 16px;">
         <h1>FusionCharts Samples for PHP</h1>
         <ol>
+			<li>
+				<a href="pages/Line-Chart-With-Time-Axis.php">Line chart with time axis</a>
+            </li>
+            <li>                
+				<a href="pages/Plotting-Multiple-Series-On-Time-Axis.php">Plotting multiple series on time axis</a>
+			</li>
+            <li>
+				<a href="pages/Column-and-line-combination-on-time-axis.php">Column and line combination on time axis</a>
+            </li>
+            <li>
+				<a href="pages/Plotting-Two-Variables.php">Plotting two variables (measures)</a>
+            </li>
+            <li>
+				<a href="pages/Different-Plot-Type-Chart.php">Different plot type for each variable (measure)</a>
+            </li>
+            <li>
+				<a href="pages/ColumnChart-With-Time-Axis.php">Column chart with time axis</a>
+            </li>
+            <li>
+				<a href="pages/AreaChart-With-Time-Axis.php">Area chart with time axis</a>
+            </li>
+            <li>
+				<a href="pages/Interactive-candlestick-chart.php">Interactive candlestick chart</a>
+            </li>
+            <li>
+				<a href="pages/Annotating-single-data-point.php">Annotating single data point</a>
+            </li>
+            <li>
+				<a href="pages/Single-Event-Overlay.php">Single event overlay</a>
+            </li>
+            <li>
+				<a href="pages/Date-range-event-overlay.php">Date range event overlay</a>
+            </li>
+            <li>
+				<a href="pages/Adding-Reference-Line.php">Adding a reference line</a>
+            </li>
             <li>
                 <a href="pages/simple-chart.php">Simple Chart Using Array</a>
             </li>
