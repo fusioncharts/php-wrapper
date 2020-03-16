@@ -372,7 +372,7 @@ let you set the following parameter in `AddAttribute` method.
 
 **FUSIONCHARTS:**
 
-Copyright (c) InfoSoft Global Pvt. Ltd.  
+Copyright (c) FusionCharts, Inc.  
 License Information at [http://www.fusioncharts.com/license](http://www.fusioncharts.com/license)
 
 
