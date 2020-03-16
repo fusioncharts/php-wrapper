@@ -11,7 +11,7 @@ Conventionally, FusionCharts Suite XT uses JavaScript and HTML to generate chart
 1.0
 
 ### Requirements
-PHP 5 or higher
+PHP 5.6 or higher
 
 ### Installation
  ** Download the **[fusioncharts-suite-xt](http://www.fusioncharts.com/)**
