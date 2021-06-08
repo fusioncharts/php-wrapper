@@ -1,32 +1,10 @@
-<!DOCTYPE html>
 <?php
 
-    /* Include the `../src/fusioncharts.php` file that contains functions to embed the charts.*/
-    include("../includes/fusioncharts.php");
-?>
-  <html>
-    <head>
-        <title>FusionCharts | Export Chart As Image (client-side)</title>
-        <!-- FusionCharts Library -->
-        <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
-        <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
-        <!--
-            <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.gammel.js"></script>
-            <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.zune.js"></script>
-            <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.carbon.js"></script>
-            <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.ocean.js"></script>
-        -->
-        <script>
-            function onUpdate(eventObj) {
-                document.getElementById("dataUpdate").innerHTML = "previous value: " + eventObj.data.prevData;          
-            }
-        </script>
-    </head>
+use FusionCharts\PhpWrapper\FusionCharts;
 
-    <body>
+require __DIR__ . '/../../vendor/autoload.php';
 
-        <?php
-        $chartData ="{  
+$chartData = "{  
             \"chart\": { 
                 \"caption\": \"Server CPU Utilization\", 
                 \"subcaption\": \"food.hsm.com\", 
@@ -62,27 +40,12 @@
                     }]
                 }
        }";
-       
-        // chart object
-        $Chart = new FusionCharts("hlineargauge", "chart-1" , "600", "400", "chart-container", "json", $chartData);
 
-        # Attach event with method name
-        $Chart->addEvent("realtimeUpdateComplete", "onUpdate");
+//chart object
+$chart = new FusionCharts("hlineargauge", "chart-1", "600", "400", "chart-container", "json", $chartData);
 
-        // Render the chart
-        $Chart->render();
+# Attach event with method name
+$chart->addEvent("realtimeUpdateComplete", "onUpdate");
 
-?>
-    <h3>Example of event(interactive event)</h3>
-    <div id="chart-container">Chart will render here!</div>
-        <br/>
-        <br/>
-        <div>
-            <p id ="dataUpdate"></p>
-        </div>
-        <br/>
-        <a href="../index.php">Go Back</a>
-
-    </body>
-
-    </html>
+//render the chart
+$chart->render();

@@ -1,27 +1,10 @@
 <?php
 
-    /* Include the `../src/fusioncharts.php` file that contains functions to embed the charts.*/
-    include("../includes/fusioncharts.php");
-?>
-  <html>
+use FusionCharts\PhpWrapper\FusionCharts;
 
-    <head>  
-        <title>FusionCharts | USA Map</title>
-        <!-- FusionCharts Library -->
-        <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
-        <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
-        <!--
-            <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.gammel.js"></script>
-            <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.zune.js"></script>
-            <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.carbon.js"></script>
-            <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.ocean.js"></script>
-        -->
-    </head>
+require __DIR__ . '/../../vendor/autoload.php';
 
-    <body>
-
-        <?php
-                $mapData = "{
+$mapData = "{
                     \"chart\": {
                       \"caption\": \"Average Temperature of US States\",
                       \"subcaption\": \"1979 - 2000\",
@@ -261,19 +244,8 @@
                     ]
                   }";
 
-      // chart object
-      $Chart = new FusionCharts("maps/usa", "map-1" , "700", "400", "map-container", "json", $mapData);
+//chart object
+$chart = new FusionCharts("maps/usa", "map-1", "700", "400", "map-container", "json", $mapData);
 
-      // Render the chart
-      $Chart->render();
-
-?>
-
-        <h3>USA Map</h3>
-        <div id="map-container">Chart will render here!</div>
-        <br/>
-        <br/>
-        <a href="../index.php">Go Back</a>
-    </body>
-
-    </html>
+//render the chart
+$chart->render();

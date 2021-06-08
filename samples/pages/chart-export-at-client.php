@@ -1,27 +1,10 @@
-<!DOCTYPE html>
 <?php
 
-    /* Include the `../src/fusioncharts.php` file that contains functions to embed the charts.*/
-    include("../includes/fusioncharts.php");
-?>
-  <html>
-    <head>   
-        <title>FusionCharts | Export Chart As Image (client-side)</title>
-        <!-- FusionCharts Library -->
-        <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
-        <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
-        <!--
-            <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.gammel.js"></script>
-            <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.zune.js"></script>
-            <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.carbon.js"></script>
-            <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.ocean.js"></script>
-        -->
-    </head>
+use FusionCharts\PhpWrapper\FusionCharts;
 
-    <body>
+require __DIR__ . '/../../vendor/autoload.php';
 
-        <?php
-                $chartData = "{
+$chartData = "{
                   \"chart\": {
                       \"caption\": \"Salary Hikes by Country\",
                       \"subCaption\": \"2016 - 2017\",
@@ -145,19 +128,8 @@
                   }]
       }";
 
-      // chart object
-      $Chart = new FusionCharts("mscombi3d", "chart-1" , "700", "400", "chart-container", "json", $chartData);
+//chart object
+$chart = new FusionCharts("mscombi3d", "chart-1", "700", "400", "chart-container", "json", $chartData);
 
-      // Render the chart
-      $Chart->render();
-
-?>
-    <h3>Export Chart As Image (client-side)</h3>
-    <div id="chart-container">Chart will render here!</div>
-        <br/>
-        <br/>
-        <a href="../index.php">Go Back</a>
-
-    </body>
-
-    </html>
+//render the chart
+$chart->render();

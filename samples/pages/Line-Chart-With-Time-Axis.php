@@ -1,35 +1,26 @@
 <?php
 
-    /* Include the `../src/fusioncharts.php` file that contains functions to embed the charts.*/
-    include("../includes/fusioncharts.php");
-?>
-  <html>
+use FusionCharts\PhpWrapper\FusionCharts;
+use FusionCharts\PhpWrapper\FusionTable;
+use FusionCharts\PhpWrapper\TimeSeries;
 
-    <head>
-        <title>FusionCharts | Simple FusionTime Chart</title>
-        <!-- FusionCharts Library -->
-        <script type="text/javascript" src="//cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
-    </head>
+require __DIR__ . '/../../vendor/autoload.php';
 
-    <body>
+$data = file_get_contents('https://s3.eu-central-1.amazonaws.com/fusion.store/ft/data/line-chart-with-time-axis-data.json');
+$schema = file_get_contents('https://s3.eu-central-1.amazonaws.com/fusion.store/ft/schema/line-chart-with-time-axis-schema.json');
 
-        <?php
-		
-			$data = file_get_contents('https://s3.eu-central-1.amazonaws.com/fusion.store/ft/data/line-chart-with-time-axis-data.json');
-			$schema = file_get_contents('https://s3.eu-central-1.amazonaws.com/fusion.store/ft/schema/line-chart-with-time-axis-schema.json');
+$fusionTable = new FusionTable($schema, $data);
+$timeSeries = new TimeSeries($fusionTable);
 
-			$fusionTable = new FusionTable($schema, $data);
-			$timeSeries = new TimeSeries($fusionTable);
-
-			$timeSeries->AddAttribute("caption", "{ 
+$timeSeries->AddAttribute("caption", "{ 
 													text: 'Sales Analysis'
 												  }");
 
-			$timeSeries->AddAttribute("subcaption", "{ 
+$timeSeries->AddAttribute("subcaption", "{ 
 											text: 'Grocery'
 										  }");
 
-			$timeSeries->AddAttribute("yAxis", "[{
+$timeSeries->AddAttribute("yAxis", "[{
 												  plot: {
 													value: 'Grocery Sales Value',
 													type: 'line'
@@ -38,21 +29,10 @@
 													prefix: '$'
 												  },
 												  title: 'Sale Value'
-											   }]");			  
-						
-			// chart object
-			$Chart = new FusionCharts("timeseries", "MyFirstChart" , "700", "450", "chart-container", "json", $timeSeries);
+											   }]");
 
-			// Render the chart
-			$Chart->render();
+//chart object
+$chart = new FusionCharts("timeseries", "MyFirstChart", "700", "450", "chart-container", "json", $timeSeries);
 
-?>
-
-        <h3>Line chart with time axis</h3>
-        <div id="chart-container">Chart will render here!</div>
-        <br/>
-        <br/>
-        <a href="../index.php">Go Back</a>
-    </body>
-
-    </html>
+//render the chart
+$chart->render();
